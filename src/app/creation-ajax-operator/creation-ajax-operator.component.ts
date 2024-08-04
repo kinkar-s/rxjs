@@ -83,20 +83,8 @@ export class CreationAjaxOperatorComponent {
       })
     );
 
-  // Example 4: Aggregating and Manipulating Multiple Data Sources
-  aggregateData$ = combineLatest([
-    ajax.getJSON('/api/users').pipe(map((response) => response)),
-    ajax.getJSON('/api/stocks').pipe(map((response) => response)),
-  ]).pipe(
-    map(([data1, data2]) => ({ ...(data1 as object), ...(data2 as object) })),
-    switchMap((aggregatedData) => of(aggregatedData)),
-    catchError((error) => {
-      console.error('Error aggregating data:', error);
-      return of({ error: true, message: 'Failed to aggregate data' });
-    })
-  );
 
-  // Example 5: Real-Time Chat Application
+  // Example 4: Real-Time Chat Application
   fetchMessages = () => ajax.getJSON('/api/chats');
   localDrafts$ = of([{ id: 'local1', text: 'Draft message', user: 'User1' }]);
   loadAndSyncMessages$ = merge(this.fetchMessages(), this.localDrafts$).pipe(
@@ -111,7 +99,7 @@ export class CreationAjaxOperatorComponent {
     })
   );
 
-  //Example 6: Dynamic Form Configuration
+  //Example 5: Dynamic Form Configuration
   fetchFormConfig$ = ajax.getJSON('/api/formConfig');
   fetchUserPreferences$ = ajax.getJSON('/api/user');
   loadAndMergeFormConfig$ = combineLatest([
@@ -155,18 +143,12 @@ export class CreationAjaxOperatorComponent {
     // });
 
     //Example 4
-    this.aggregateData$.subscribe({
-      next: (user) => console.log('aggregate Data:', user),
-      error: (err) => console.error('Error:', err),
-    });
-
-    //Example 5
     this.loadAndSyncMessages$.subscribe({
       next: (msg) => console.log('loadAndSyncMessages Data:', msg),
       error: (err) => console.error('Error:', err),
     });
 
-    //Example 6
+    //Example 5
     this.loadAndMergeFormConfig$.subscribe({
       next: (formConfig) =>
         console.log('loadAndMergeFormConfig Data:', formConfig),
