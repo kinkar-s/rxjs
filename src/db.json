@@ -1,0 +1,200 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "age": 30,
+      "gender": "Male",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "phone": "555-1234",
+      "isActive": true,
+      "registered": "2023-01-15"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "age": 25,
+      "gender": "Female",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90001"
+      },
+      "phone": "555-5678",
+      "isActive": true,
+      "registered": "2023-02-20"
+    },
+    {
+      "id": 3,
+      "firstName": "Alice",
+      "lastName": "Johnson",
+      "email": "alice.johnson@example.com",
+      "age": 28,
+      "gender": "Female",
+      "address": {
+        "street": "789 Pine St",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60601"
+      },
+      "phone": "555-9012",
+      "isActive": false,
+      "registered": "2023-03-25"
+    },
+    {
+      "id": 4,
+      "firstName": "Kinkar",
+      "lastName": "sarkar",
+      "email": "s.b@example.com",
+      "age": 30,
+      "gender": "Male",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "phone": "555-1234",
+      "isActive": true,
+      "registered": "2023-01-15"
+    }
+   
+  ],
+  "stocks": [
+    {
+      "symbol": "AAPL",
+      "companyName": "Apple Inc.",
+      "currentPrice": 150.25,
+      "openPrice": 148,
+      "closePrice": 147.5,
+      "high": 151,
+      "low": 147,
+      "volume": 5000000,
+      "date": "2024-08-04"
+    },
+    {
+      "symbol": "GOOGL",
+      "companyName": "Alphabet Inc.",
+      "currentPrice": 2725.3,
+      "openPrice": 2700,
+      "closePrice": 2695.8,
+      "high": 2730,
+      "low": 2680,
+      "volume": 1500000,
+      "date": "2024-08-04"
+    },
+    {
+      "symbol": "MSFT",
+      "companyName": "Microsoft Corporation",
+      "currentPrice": 299.99,
+      "openPrice": 295,
+      "closePrice": 294.5,
+      "high": 300.5,
+      "low": 294,
+      "volume": 2000000,
+      "date": "2024-08-04"
+    },
+    {
+      "symbol": "TSLA",
+      "companyName": "Tesla, Inc.",
+      "currentPrice": 650.3,
+      "openPrice": 640,
+      "closePrice": 635.5,
+      "high": 655,
+      "low": 630,
+      "volume": 10000000,
+      "date": "2024-08-04"
+    },
+    {
+      "symbol": "AMZN",
+      "companyName": "Amazon.com, Inc.",
+      "currentPrice": 3400.75,
+      "openPrice": 3350,
+      "closePrice": 3330.5,
+      "high": 3410,
+      "low": 3320,
+      "volume": 3000000,
+      "date": "2024-08-04"
+    }
+  ],
+  "chats":[{ "id": "local2", "text": "backend message", "user": "User2" }],
+  "formConfig": {
+    "formName": "UserProfileForm",
+    "controls": [
+       {
+        "name": "firstName",
+        "label": "First Name",
+        "type": "text",
+        "value": "",
+        "validators": {
+          "required": true,
+          "minLength": 2,
+          "maxLength": 30
+        },
+        "errorMessages": {
+          "required": "First name is required.",
+          "minLength": "First name must be at least 2 characters long.",
+          "maxLength": "First name cannot exceed 30 characters."
+        }
+      },
+      {
+        "name": "lastName",
+        "label": "Last Name",
+        "type": "text",
+        "value": "",
+        "validators": {
+          "required": true,
+          "minLength": 2,
+          "maxLength": 30
+        },
+        "errorMessages": {
+          "required": "Last name is required.",
+          "minLength": "Last name must be at least 2 characters long.",
+          "maxLength": "Last name cannot exceed 30 characters."
+        }
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "value": "",
+        "validators": {
+          "required": true,
+          "email": true
+        },
+        "errorMessages": {
+          "required": "Email is required.",
+          "email": "Please enter a valid email address."
+        }
+      }
+    ]
+  },
+  "user" : {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "age": 30,
+    "gender": "Male",
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10001"
+    },
+    "phone": "555-1234",
+    "isActive": true,
+    "registered": "2023-01-15"
+  }
+  
+}
