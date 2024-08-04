@@ -83,7 +83,6 @@ export class CreationAjaxOperatorComponent {
       })
     );
 
-
   // Example 4: Real-Time Chat Application
   fetchMessages = () => ajax.getJSON('/api/chats');
   localDrafts$ = of([{ id: 'local1', text: 'Draft message', user: 'User1' }]);
